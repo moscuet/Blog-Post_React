@@ -1,8 +1,10 @@
 import React, {Component} from 'react';
 import './App.css';
-import PostItem from './components/PostItem';
-import EditPost from './components/EditPost';
 import AddPost from './components/AddPost';
+import PostList from './components/PostList';
+import ViewPost from './components/ViewPost';
+import { v4 as uuidv4 } from 'uuid';
+
 
 
 import {BrowserRouter,
@@ -16,53 +18,61 @@ import {BrowserRouter,
 } from 'react-router-dom';
 
 class App extends Component {
-  constructor() {
-    super()
+  constructor(props) {
+    super(props)
     this.state = {
       posts: [
         {
-          title: 'Day in School',
+          id: uuidv4(),
+          title: 'Day at school',
+          category: 'Work',
           description: 'This was my first day in school. Cool!'
         },
         {
+          id: uuidv4(),
           title: 'Day at the beach',
+          category: 'Work',
           description: 'This was my first day in school. Cool!'
         },
         {
+          id: uuidv4(),
           title: 'Day at the bar',
+          category: 'Work',
           description: 'This was my first day in school. Cool!'
         },
         {
-          title: 'Day in a funeral',
+          id: uuidv4(),
+          title: 'Day at a funeral',
+          category: 'Work',
           description: 'This was my first day in school. Cool!'
         }
       ]
+      
+
     }
   }
+
+  addPost = (newPost) => {
+    this.setState({posts: [...this.state.posts, newPost]})
+    console.log(newPost)
+  }
+
   render() {
-    let postList = this.state.posts.map((post) => (
-      <PostItem title={post.title}
-                description={post.description} />
-    ))
+  
     return (
       <BrowserRouter>
 
       <div className="App">
-          <ul>
-            <li> <NavLink to='/'>Posts</NavLink></li>
-            {/* <li> <NavLink to='/editposts'>Edit Post</NavLink></li> */}
-            <li> <NavLink to='/addpost'>Add Post</NavLink></li>
+           <ul className="nav-links">
+              <NavLink to='/addpost' onClick={this.handleClick}>Add Post</NavLink>
           </ul>
-          <Switch>
-            <Route path="/editposts"><EditPost /></Route>
-            <Route path="/addpost"><AddPost /></Route>
-            <Route path="/"><PostItem /></Route>
-  
-          </Switch>
-  
-          <div>
-            {postList}
-          </div>
+
+            <Switch>
+            <Route path="/addpost" component={(props)=><AddPost {...props} addPost={this.addPost}/>} />
+            {/* <Route path="/editpost/:id" component={<ViewPost post={props.match.params.id}/>}/>  */}
+            <Route path="/" component ={(props)=><PostList posts={this.state.posts} />} />  
+            </Switch>
+         
       </div>
       </BrowserRouter>
 

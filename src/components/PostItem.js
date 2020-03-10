@@ -1,20 +1,18 @@
 import React from 'react';
 import {NavLink} from 'react-router-dom';
+import './assets/style/postitem.css'
 
 
-const PostItem = (props) => {
-    let {title, description} = props;
+const PostItem = ({title, category, description}) => {
     return (
-        <div>
-            <div>
-            <ul>
-                <h2>{title}</h2>
-                <p>{description}</p>
-                <li><NavLink to="/editposts">Edit Post</NavLink></li>
+            <div className="post-item__container">
+            <ul className="post-item__wrapper">
+                <h2 className="post-title">{title}</h2>
+                <h2 className="post-category">{category}</h2>
+                <p className="post-description">{description}</p>
                 
             </ul>
             </div>
-        </div>
     )
 }
 
