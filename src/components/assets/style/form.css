@@ -1,0 +1,27 @@
+.form {
+    padding: 4rem 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    line-height: 1.9;
+    border: 1px solid lightslategray;
+}
+
+.input-topics {
+    display: flex;
+    justify-content: center;
+    margin: 1rem;
+    align-items: center;
+}
+
+input {
+    width: 35rem;
+    padding: .9rem;
+    margin-left: 1rem;
+}
+
+textarea {
+    width: 50rem;
+    height: 20rem;
+}
