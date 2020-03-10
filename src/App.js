@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import './App.css';
 import AddPost from './components/AddPost';
 import PostList from './components/PostList';
+import ViewPost from './components/ViewPost';
 import { v4 as uuidv4 } from 'uuid';
 
 
@@ -68,6 +69,7 @@ class App extends Component {
 
             <Switch>
             <Route path="/addpost" component={(props)=><AddPost {...props} addPost={this.addPost}/>} />
+            {/* <Route path="/editpost/:id" component={<ViewPost post={props.match.params.id}/>}/>  */}
             <Route path="/" component ={(props)=><PostList posts={this.state.posts} />} />  
             </Switch>
          

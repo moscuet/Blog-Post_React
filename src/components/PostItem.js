@@ -7,10 +7,9 @@ const PostItem = ({title, category, description}) => {
     return (
             <div className="post-item__container">
             <ul className="post-item__wrapper">
-                <h2>{title}</h2>
-                <h2>{category}</h2>
-                <p>{description}</p>
-                <li><NavLink to="/editpost" className="edit-link">Edit Post</NavLink></li>
+                <h2 className="post-title">{title}</h2>
+                <h2 className="post-category">{category}</h2>
+                <p className="post-description">{description}</p>
                 
             </ul>
             </div>

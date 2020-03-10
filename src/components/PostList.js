@@ -1,5 +1,7 @@
 import React from 'react';
 import PostItem from './PostItem';
+import './assets/style/postlist.css';
+import {NavLink} from 'react-router-dom';
 
 
 const PostList = (props) => {
@@ -12,9 +14,9 @@ const PostList = (props) => {
   ))
 
           return (
-            <div>
+            <div className="posts-wrapper">
                {postList}
-          </div>
+            </div>
     
 
           )
