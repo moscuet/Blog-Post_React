@@ -58,7 +58,7 @@ class App extends Component {
   }
 
   render() {
-  
+    console.log(this.props.title)
     return (
       <BrowserRouter>
 
@@ -69,7 +69,7 @@ class App extends Component {
 
             <Switch>
             <Route path="/addpost" component={(props)=><AddPost {...props} addPost={this.addPost}/>} />
-            {/* <Route path="/editpost/:id" component={<ViewPost post={props.match.params.id}/>}/>  */}
+            {/* <Route path={`/viewpost/`} component={(props)=><ViewPost post={props.match.params.id}/>}/>  */}
             <Route path="/" component ={(props)=><PostList posts={this.state.posts} />} />  
             </Switch>
          
