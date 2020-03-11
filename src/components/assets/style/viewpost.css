@@ -1,0 +1,17 @@
+.viewpost-container {
+    padding: 3rem 4rem;
+    border: 1px solid lightgray;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.buttons-wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+button {
+    padding: 1rem;
+}

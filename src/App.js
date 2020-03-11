@@ -3,17 +3,16 @@ import './App.css';
 import AddPost from './components/AddPost';
 import PostList from './components/PostList';
 import ViewPost from './components/ViewPost';
-import { v4 as uuidv4 } from 'uuid';
+// import { v4 as uuidv4 } from 'uuid';
+import {blogData} from './components/blogData';
 
 
 
 import {BrowserRouter,
   Route,
-  Link,
   NavLink,
   Switch,
-  Prompt,
-  Redirect
+  
 
 } from 'react-router-dom';
 
@@ -21,7 +20,7 @@ class App extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      posts: [
+      posts: blogData/*[
         {
           id: uuidv4(),
           title: 'Day at school',
@@ -46,7 +45,7 @@ class App extends Component {
           category: 'Work',
           description: 'This was my first day in school. Cool!'
         }
-      ]
+      ]*/
       
 
     }
@@ -57,20 +56,36 @@ class App extends Component {
     console.log(newPost)
   }
 
+  deletePost = (id) => {
+    const unDeletedPosts = this.state.posts.filter((post) => post.id !== this.state.id)
+    this.setState({posts: unDeletedPosts})
+    console.log(this.state.unDeletedPosts)
+    console.log(unDeletedPosts)
+
+  }
+  editPost = (id, updatedPost) => {
+      const updatedPosts = this.state.posts.map((post) => {
+        if(post.id === id) {
+            return {...post, post: updatedPost }
+        }
+        return post
+      })
+      this.setState({posts: updatedPosts})
+  }
+
   render() {
-    console.log(this.props.title)
-    return (
+    console.log(this.state.posts)
+    return  (
       <BrowserRouter>
 
       <div className="App">
-           <ul className="nav-links">
-              <NavLink to='/addpost' onClick={this.handleClick}>Add Post</NavLink>
-          </ul>
-
+        
             <Switch>
             <Route path="/addpost" component={(props)=><AddPost {...props} addPost={this.addPost}/>} />
-            {/* <Route path={`/viewpost/`} component={(props)=><ViewPost post={props.match.params.id}/>}/>  */}
-            <Route path="/" component ={(props)=><PostList posts={this.state.posts} />} />  
+            <Route path={`/viewpost/:id`} component={(props)=><ViewPost posts={this.state.posts} id={props.match.params.id} {...props}
+            deletePost={() =>this.deletePost}
+            editPost={()=> this.editPost}/>}/> 
+            <Route path="/" component={()=><PostList posts={this.state.posts} />} />  
             </Switch>
          
       </div>

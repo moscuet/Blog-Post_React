@@ -24,8 +24,6 @@ class AddPost extends Component {
         e.target.reset();
         let newPost = {id: uuidv4(), ...this.state.post};
         this.props.addPost(newPost)
-        console.log(newPost)
-        console.log(this.props)
         this.props.history.push('/');
 
 
@@ -36,12 +34,10 @@ class AddPost extends Component {
         let {name, value} = e.target;
         const post = {...this.state.post,[name]: value}
         this.setState({post})
-        console.log(post)
        
 
     }
     render() {
-        console.log(this.state)
 
         let {title, category, description} = this.state;
 
