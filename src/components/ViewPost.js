@@ -103,28 +103,23 @@ const ViewPost = (props) => {
  
 
     const filteredPosts = posts.filter((post) => {
-        console.log(post)
         return post.id === id
     })
 
-    const deletePost = () => {
-        console.log(props)
-        props.deletePost(id)
-
-
-    }
-    console.log(filteredPosts)
+    
+  
     return (
         <div className="viewpost-container">
             <button><NavLink to="/">Back to Post</NavLink></button>
-            <h1>This is the Edit Posts</h1>
+            <h1>This is the View Posts</h1>
             <h1>{filteredPosts[0].title}</h1>
                 <h1>{filteredPosts[0].category}</h1>
                 <h1>{filteredPosts[0].description}</h1>
             <div className="buttons-wrapper">
                
-            <button>Edit</button>
-            <button onClick={deletePost}>Delete</button>
+            <NavLink to={`/editpost/${id}`}> <button id={id}> Edit Post </button></NavLink>
+            <NavLink to ='/'><button id={id} onClick={props.deletePost}>Delete</button></NavLink>
+            
             </div>
 
 
