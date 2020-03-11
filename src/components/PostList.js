@@ -5,15 +5,19 @@ import {NavLink} from 'react-router-dom';
 
 
 const PostList = (props) => {
-  console.log(props)
   let postList = props.posts.map((post) => (
-    <PostItem post={post} />
+    <PostItem key={post.id} post={post} />
   ))
 
           return (
+            <div>
+              <NavLink to='/addpost'>Add Post</NavLink>
+
             <div className="posts-wrapper">
                {postList}
             </div>
+            </div>
+
     
 
           )

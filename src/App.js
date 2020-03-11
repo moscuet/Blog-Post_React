@@ -3,17 +3,17 @@ import './App.css';
 import AddPost from './components/AddPost';
 import PostList from './components/PostList';
 import ViewPost from './components/ViewPost';
-import { v4 as uuidv4 } from 'uuid';
+import EditPost from './components/EditPost';
+// import { v4 as uuidv4 } from 'uuid';
+import {blogData} from './components/blogData';
 
 
 
 import {BrowserRouter,
   Route,
-  Link,
   NavLink,
   Switch,
-  Prompt,
-  Redirect
+
 
 } from 'react-router-dom';
 
@@ -21,35 +21,11 @@ class App extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      posts: [
-        {
-          id: uuidv4(),
-          title: 'Day at school',
-          category: 'Work',
-          description: 'This was my first day in school. Cool!'
-        },
-        {
-          id: uuidv4(),
-          title: 'Day at the beach',
-          category: 'Work',
-          description: 'This was my first day in school. Cool!'
-        },
-        {
-          id: uuidv4(),
-          title: 'Day at the bar',
-          category: 'Work',
-          description: 'This was my first day in school. Cool!'
-        },
-        {
-          id: uuidv4(),
-          title: 'Day at a funeral',
-          category: 'Work',
-          description: 'This was my first day in school. Cool!'
-        }
-      ]
-      
+            posts: blogData
 
-    }
+            }
+
+
   }
 
   addPost = (newPost) => {
@@ -57,28 +33,57 @@ class App extends Component {
     console.log(newPost)
   }
 
+  deletePost = (e) => {
+    console.log(e.target.props)
+    const unDeletedPosts = this.state.posts.filter((post) => post.id !== e.target.id)
+    this.setState({posts: unDeletedPosts})
+
+
+  }
+
+  handleChange = (e) => {
+    let {name, value, id} = e.target;
+    console.log(name, value, id)
+    this.setState({[name]: value})
+
+
+  
+    
+  }
+
+  // editPost = (id, updatedPost) => {
+  //     const updatedPosts = this.state.posts.map((post) => {
+  //       if(post.id === id) {
+  //           return {...post, post: updatedPost }
+  //       }
+  //       return post
+  //     })
+  //     this.setState({posts: updatedPosts})
+  // }
+
   render() {
-    console.log(this.props.title)
-    return (
+    console.log(this.state.posts)
+    console.log(this.state)
+
+    return  (
       <BrowserRouter>
 
       <div className="App">
-           <ul className="nav-links">
-              <NavLink to='/addpost' onClick={this.handleClick}>Add Post</NavLink>
-          </ul>
 
             <Switch>
             <Route path="/addpost" component={(props)=><AddPost {...props} addPost={this.addPost}/>} />
-            {/* <Route path={`/viewpost/`} component={(props)=><ViewPost post={props.match.params.id}/>}/>  */}
-            <Route path="/" component ={(props)=><PostList posts={this.state.posts} />} />  
+            <Route path={`/viewpost/:id`} component={(props)=><ViewPost posts={this.state.posts} id={props.match.params.id} {...props}
+            deletePost={this.deletePost}/>}/>
+            <Route path={`/editpost/:id`} component={(props)=><EditPost posts={this.state.posts} id={props.match.params.id} handleChange={this.handleChange} />}/>
+            <Route path="/" component={()=><PostList posts={this.state.posts} />} />
             </Switch>
-         
+
       </div>
       </BrowserRouter>
 
     );
   }
   }
- 
+
 
 export default App;
