@@ -1,7 +1,7 @@
 import {NavLink} from 'react-router-dom';
 import React, { Component } from 'react'
-import './assets/style/form.css';
-
+import '../assets/style/form.css';
+import '../assets/style/editpost.css';
 
 class EditPost extends Component {
     constructor(props) {
@@ -27,13 +27,15 @@ class EditPost extends Component {
 
      }
 
-    // handleSubmit= (e) => {
-    //     e.preventDefault();
-    //     const updatedPost = {...this.state.post}
-    //     this.props.editPost(this.props.id, updatedPost);
-    //     this.props.history.push('/');
+     /*
+    handleSubmit= (e) => {
+         e.preventDefault();
+         const updatedPost = {...this.state.post}
+         this.props.editPost(this.props.id, updatedPost);
+         this.props.history.push('/');
 
-    // }
+     }*/
+
     handleChange = (e) => {
         let {name, value} = e.target;
         const post = {...this.state.post,[name]: value}
@@ -43,32 +45,33 @@ class EditPost extends Component {
 
   
     componentDidMount(){
-        const {posts,id } = this.props
+        const {posts, id} = this.props
         const filteredPosts = posts.filter((post) => {
          return post.id === id
      })
      this.setState({post: filteredPosts[0]})
+     console.log(filteredPosts)
     }
     render() {
         
+        let {title, category, description} = this.state.post;
         
         return (
             <div>
             <form onSubmit={this.handleSubmit} className="form">
-            <h1>Edit Post</h1>
             <input type="text" 
             name="title" 
-            value={this.state.post.title}
+            value={title}
             onChange={this.handleChange}/>
 
             <input type="text" 
             name="category" 
-            value={this.state.post.category}
+            value={category}
             onChange={this.handleChange}/>
 
             <textarea type="text" 
             name="description" 
-            value={this.state.post.description}
+            value={description}
             onChange={this.handleChange}/>
 
             <div className="buttons-wrapper">

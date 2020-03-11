@@ -1,0 +1,13 @@
+form {
+    background-image: linear-gradient(to right, rgb(253, 252, 251), rgba(237, 249, 250, 0.18)), url("../imgs/back.jpg");
+    background-position: center;
+    background-size: cover;}
+
+input {
+    margin-top: 1rem;
+}
+
+textarea {
+    margin-top: 1rem;
+    border: none;
+}

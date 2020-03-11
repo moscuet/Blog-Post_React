@@ -9,11 +9,18 @@
     justify-content: center;
     align-items: center;
     line-height: 2.3;
+    background-image: linear-gradient(to right, rgb(253, 252, 251), rgba(237, 249, 250, 0.18)), url("../imgs/back.jpg");
+    background-position: center;
+    background-size: cover;
+    border-radius: 5px;
+    width: 50rem;
+
 }
 
-.back-to-top__btn__wrapper {
+.back-to-posts__wrapper {
     display: flex;
     justify-content: flex-start;
+    
 }
 
 .back-to-posts__btn {
@@ -24,6 +31,8 @@
     color: white;
     cursor: pointer;
     margin: 1rem;
+    align-self: flex-start;
+    font-family: 'Montserrat';
 
 }
 
@@ -40,7 +49,7 @@
 
 .header-container {
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
 }
 
 h3 {
@@ -67,11 +76,25 @@ button {
     color: white;
     cursor: pointer;
     margin: 1rem;
+    font-family: 'Montserrat';
+    margin: 1.5rem;
+
+
 }
 
-.btn-edit:hover,
+.btn-delete {
+    background-color: rgb(250, 135, 135);
+    text-decoration: none;
+
+}
+
+
+.btn-edit:hover {
+    background-color: rgb(85, 152, 194);
+    transform: translateY(-.1rem);
+}
 .btn-delete:hover {
-    background-color: rgb(55, 139, 190);
+    background-color: rgb(177, 43, 43);
     transform: translateY(-.1rem);
 
 }

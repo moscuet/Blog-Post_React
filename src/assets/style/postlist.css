@@ -1,0 +1,31 @@
+.container-blog {
+    padding: 4rem 5rem;
+}
+
+.blog-header {
+    color: white;
+    text-align: center;
+}
+
+.add-post-container {
+    padding: 1rem;
+    display: flex;
+    flex-direction: flex-start;
+    
+}
+
+.add-post-link {
+    padding: 1rem;
+    background-color: lightcoral;
+    text-decoration: none;
+    color: white;
+    font-family: 'Montserrat';
+    border-radius: 3px;
+}
+
+.add-post-link:hover {
+    background-color: rgb(206, 79, 79);
+    transform: translateY(-.1rem);
+
+}
+

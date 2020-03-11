@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import './assets/style/form.css';
+import '../assets/style/form.css';
 import { v4 as uuidv4 } from 'uuid';
 import {NavLink} from 'react-router-dom';
 
