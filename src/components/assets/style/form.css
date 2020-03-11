@@ -1,11 +1,13 @@
 .form {
     padding: 4rem 4rem;
+    margin: 2rem 0;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     line-height: 1.9;
-    border: 1px solid lightslategray;
+    border: 3px solid #fff;
+    border-radius: 10px;
 }
 
 .input-topics {
@@ -15,12 +17,12 @@
     align-items: center;
 }
 
+
 input {
     width: 35rem;
     padding: .9rem;
     margin-left: 1rem;
 }
-
 textarea {
     width: 50rem;
     height: 20rem;

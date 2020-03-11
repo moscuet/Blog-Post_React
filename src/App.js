@@ -22,8 +22,8 @@ class App extends Component {
     super(props)
     this.state = {
             posts: blogData
-
-            }
+            
+          }
 
 
   }
@@ -38,32 +38,19 @@ class App extends Component {
     const unDeletedPosts = this.state.posts.filter((post) => post.id !== e.target.id)
     this.setState({posts: unDeletedPosts})
 
-
   }
-
-  handleChange = (e) => {
-    let {name, value, id} = e.target;
-    console.log(name, value, id)
-    this.setState({[name]: value})
-
-
   
-    
-  }
+  editPost = (newPost,id) => {
+    const newPosts= this.state.posts.map( (post) => {
+     return post.id === id ? newPost:post
+    })
+    this.setState({posts:newPosts})
+    console.log(this.state.posts)
+    }
 
-  // editPost = (id, updatedPost) => {
-  //     const updatedPosts = this.state.posts.map((post) => {
-  //       if(post.id === id) {
-  //           return {...post, post: updatedPost }
-  //       }
-  //       return post
-  //     })
-  //     this.setState({posts: updatedPosts})
-  // }
+
 
   render() {
-    console.log(this.state.posts)
-    console.log(this.state)
 
     return  (
       <BrowserRouter>
@@ -73,8 +60,8 @@ class App extends Component {
             <Switch>
             <Route path="/addpost" component={(props)=><AddPost {...props} addPost={this.addPost}/>} />
             <Route path={`/viewpost/:id`} component={(props)=><ViewPost posts={this.state.posts} id={props.match.params.id} {...props}
-            deletePost={this.deletePost}/>}/>
-            <Route path={`/editpost/:id`} component={(props)=><EditPost posts={this.state.posts} id={props.match.params.id} handleChange={this.handleChange} />}/>
+            deletePost={this.deletePost} />}/>
+            <Route path={`/editpost/:id`} component={(props)=><EditPost {...props} posts={this.state.posts} id={props.match.params.id} editPost={this.editPost}/>}/>
             <Route path="/" component={()=><PostList posts={this.state.posts} />} />
             </Switch>
 
