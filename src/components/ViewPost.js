@@ -117,7 +117,7 @@ const ViewPost = (props) => {
                 <h1>{filteredPosts[0].description}</h1>
             <div className="buttons-wrapper">
                
-            <NavLink to={`/editpost/${id}`}> <button id={id}> Edit Post </button></NavLink>
+            <NavLink to={`/editpost/${id}`}> <button id={id} onClick={props.editPost}> Edit Post </button></NavLink>
             <NavLink to ='/'><button id={id} onClick={props.deletePost}>Delete</button></NavLink>
             
             </div>
