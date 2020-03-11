@@ -1,6 +1,6 @@
 import React from 'react';
 import PostItem from './PostItem';
-import './assets/style/postlist.css';
+import '../assets/style/postlist.css';
 import {NavLink} from 'react-router-dom';
 
 
@@ -11,8 +11,9 @@ const PostList = (props) => {
 
           return (
             <div>
-              <NavLink to='/addpost'>Add Post</NavLink>
-
+            <div className="add-post-container">
+              <NavLink to='/addpost' className="add-post-link">Add Post</NavLink>
+              </div>
             <div className="posts-wrapper">
                {postList}
             </div>

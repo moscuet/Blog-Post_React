@@ -7,13 +7,9 @@ import EditPost from './components/EditPost';
 // import { v4 as uuidv4 } from 'uuid';
 import {blogData} from './components/blogData';
 
-
-
 import {BrowserRouter,
   Route,
-  NavLink,
   Switch,
-
 
 } from 'react-router-dom';
 
@@ -40,12 +36,23 @@ class App extends Component {
 
   }
   
-  editPost = (newPost,id) => {
-    const newPosts= this.state.posts.map( (post) => {
-     return post.id === id ? newPost:post
+  /*
+  editPost = (id, updatedPost) => {
+    const updatedPosts = this.state.posts.map((post) => {
+        if(post.id === id) {
+            return updatedPost
+        } else {
+          return post
+        }
+    })
+    this.setState({posts: updatedPosts})
+}*/
+
+  editPost = (newPost, id) => {
+    const newPosts= this.state.posts.map((post) => {
+    return post.id === id ? newPost : post
     })
     this.setState({posts:newPosts})
-    console.log(this.state.posts)
     }
 
 
@@ -57,7 +64,7 @@ class App extends Component {
 
       <div className="App">
         <div className="container">
-
+        
             <Switch>
             <Route path="/addpost" component={(props)=><AddPost {...props} addPost={this.addPost}/>} />
             <Route path={`/viewpost/:id`} component={(props)=><ViewPost posts={this.state.posts} id={props.match.params.id} {...props}
