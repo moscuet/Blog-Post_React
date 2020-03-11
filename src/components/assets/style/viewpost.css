@@ -1,3 +1,6 @@
+.viewpost-wrapper {
+    padding: 5rem 10rem;
+}
 .viewpost-container {
     padding: 3rem 4rem;
     border: 1px solid lightgray;
@@ -5,13 +8,70 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    line-height: 2.3;
+}
+
+.back-to-top__btn__wrapper {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.back-to-posts__btn {
+    padding: 1.2rem;
+    background-color: rgb(70, 81, 88);
+    border: none;
+    border-radius: 3px;
+    color: white;
+    cursor: pointer;
+    margin: 1rem;
+
+}
+
+.back-to-posts__link {
+    color: white;
+    text-decoration: none;
+}
+
+.back-to-posts__btn:hover {
+    background-color: rgb(103, 114, 121);
+    transform: translateY(-.1rem);
+
+}
+
+.header-container {
+    display: flex;
+    justify-content: center;
+}
+
+h3 {
+    margin: 2rem;
+    color: rgb(37, 41, 99);
 }
 
 .buttons-wrapper {
     display: flex;
     justify-content: center;
+    margin-top: 2rem;
 }
 
 button {
     padding: 1rem;
+}
+
+.btn-edit,
+.btn-delete {
+    padding: 1.2rem;
+    background-color: lightskyblue;
+    border: none;
+    border-radius: 3px;
+    color: white;
+    cursor: pointer;
+    margin: 1rem;
+}
+
+.btn-edit:hover,
+.btn-delete:hover {
+    background-color: rgb(55, 139, 190);
+    transform: translateY(-.1rem);
+
 }
