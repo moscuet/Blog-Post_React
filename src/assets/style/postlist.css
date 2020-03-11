@@ -1,3 +1,12 @@
+.container-blog {
+    padding: 4rem 5rem;
+}
+
+.blog-header {
+    color: white;
+    text-align: center;
+}
+
 .add-post-container {
     padding: 1rem;
     display: flex;
