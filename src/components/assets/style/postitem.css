@@ -5,10 +5,10 @@
     justify-content: space-between;
     background-color: rgb(61, 170, 155, 0.7);
     color: #fff; 
-    padding: 1rem 2rem;
+    padding: 3rem 4rem;
     border: 1px solid #fff;
     margin: 1rem;
-    min-width: 100%;
+    width: 50rem;
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
     border-top-left-radius: 5px;
@@ -16,13 +16,27 @@
     cursor: pointer;
 }
 .post-item__wrapper {
-    display: flex;
+    display: grid;
     align-items: center;
-    justify-content: space-evenly;
-    list-style: none;
+    grid-template-columns: 45% 35% 20%;
 }
-.edit-link {
-    border: 1px solid lightgray;
+.view-link {
     padding: 1.2rem;
     background-color: lightskyblue;
+    border: none;
+    border-radius: 3px;
+    color: white;
+    cursor: pointer;
+
+}
+
+.link {
+    text-decoration: none;
+    color: white;
+}
+
+.view-link:hover {
+    background-color: rgb(55, 139, 190);
+    transform: translateY(-.1rem);
+
 }

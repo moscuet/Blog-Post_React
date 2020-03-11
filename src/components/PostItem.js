@@ -13,7 +13,7 @@ const PostItem = (props) => {
             <ul className="post-item__wrapper">
                 <h2 className="post-title">{title}</h2>
                 <h2 className="post-category">{category}</h2>
-                <button><NavLink to={`/viewpost/${id}`}>View Post</NavLink></button> 
+                <button className="view-link"><NavLink to={`/viewpost/${id}`} className="link">View Post</NavLink></button> 
                 
             </ul>
             </div>

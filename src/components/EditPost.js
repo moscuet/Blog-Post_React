@@ -71,9 +71,10 @@ class EditPost extends Component {
             value={this.state.post.description}
             onChange={this.handleChange}/>
 
-            <div className="buttons-wrapper"></div>
-            <button>Save</button>
-            <NavLink to ="/"><button>Cancel</button></NavLink>
+            <div className="buttons-wrapper">
+            <button className="btn-save">Save</button>
+            <NavLink to ="/" className="nav-cancel"><button className="btn-cancel">Cancel</button></NavLink>
+            </div>
 
             
         </form>

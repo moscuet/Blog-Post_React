@@ -43,7 +43,6 @@ class AddPost extends Component {
 
         return (
             <div>
-                <h1>This is the Add Post</h1>
                 <form className="form" onSubmit={this.handleSubmit}>
                     <div className="input-topics">
                     <label>Title</label>
@@ -67,9 +66,11 @@ class AddPost extends Component {
                     category={description} 
                     placeholder="write here" 
                     onChange={this.handleChange}></textarea>
-                    <button onClick={this.addPost}>Save</button>
-                    
-                    <NavLink to ="/">Cancel</NavLink>
+
+                    <div className="buttons-wrapper">
+                    <button onClick={this.addPost} className="btn-save">Save</button>
+                    <NavLink to ="/" className="btn-cancel">Cancel</NavLink>
+                    </div>
     
     
                 </form>

@@ -56,6 +56,7 @@ class App extends Component {
       <BrowserRouter>
 
       <div className="App">
+        <div className="container">
 
             <Switch>
             <Route path="/addpost" component={(props)=><AddPost {...props} addPost={this.addPost}/>} />
@@ -65,6 +66,7 @@ class App extends Component {
             <Route path="/" component={()=><PostList posts={this.state.posts} />} />
             </Switch>
 
+      </div>
       </div>
       </BrowserRouter>
 
