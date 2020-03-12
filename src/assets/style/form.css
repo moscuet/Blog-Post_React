@@ -17,12 +17,21 @@
     align-items: center;
 }
 
-
+.title-category {
+    margin-left: 1rem;
+}
 input {
-    width: 35rem;
+    width: 17rem;
     padding: .9rem;
     margin-left: 1rem;
     font-size: 16px;
+    font-family: 'Montserrat';
+}
+
+select {
+    padding: 1.1rem;
+    margin-top: 1rem;
+    margin-left: 1rem;
     font-family: 'Montserrat';
 }
 textarea {

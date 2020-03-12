@@ -64,10 +64,14 @@ class EditPost extends Component {
             value={title}
             onChange={this.handleChange}/>
 
-            <input type="text" 
-            name="category" 
-            value={category}
-            onChange={this.handleChange}/>
+            <select name="category" value={category} onChange={this.handleChange}>
+                <option value=''>----Select Category</option>
+                <option value='Work'>Work</option>
+                <option value='Speech'>Speech</option>
+                <option value='Recreation'>Recreation</option>
+                <option value='Sport'>Sport</option>
+                <option value='Other'>Other</option>
+            </select>
 
             <textarea type="text" 
             name="description" 

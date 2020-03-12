@@ -26,7 +26,7 @@ const ViewPost = (props) => {
     } else if(filteredPosts[0].category.toLowerCase().includes('speech')) {
         index = index +1
         postStyles = postStyles[index]
-    } else if(filteredPosts[0].category.toLowerCase().includes('recration')) {
+    } else if(filteredPosts[0].category.toLowerCase().includes('recreation')) {
         index = index +2
         postStyles = postStyles[index];
     }    else if(filteredPosts[0].category.toLowerCase().includes('sport')) {

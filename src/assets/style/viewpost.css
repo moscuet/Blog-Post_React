@@ -26,7 +26,7 @@
 
 .back-to-posts__btn {
     padding: 1.2rem;
-    background-color: rgb(70, 81, 88);
+    background-color: rgb(89, 135, 163);
     border: none;
     border-radius: 3px;
     color: white;
@@ -55,7 +55,7 @@
 
 h3 {
     margin: 2rem;
-    color: rgb(37, 41, 99);
+    color: rgb(255, 255, 255);
 }
 
 .buttons-wrapper {
