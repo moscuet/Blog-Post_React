@@ -23,10 +23,10 @@ const ViewPost = (props) => {
     let index = 0;
     if(filteredPosts[0].category.toLowerCase().includes('work')) {
         postStyles = postStyles[index];
-    } else if(filteredPosts[0].category.toLowerCase().includes('speech')) {
+    } else if(filteredPosts[0].category.toLowerCase().includes('entertainment')) {
         index = index +1
         postStyles = postStyles[index]
-    } else if(filteredPosts[0].category.toLowerCase().includes('recreation')) {
+    } else if(filteredPosts[0].category.toLowerCase().includes('travel')) {
         index = index +2
         postStyles = postStyles[index];
     }    else if(filteredPosts[0].category.toLowerCase().includes('sport')) {
@@ -53,7 +53,7 @@ const ViewPost = (props) => {
                 <p>Category: {filteredPosts[0].description}</p>
             <div className="buttons-wrapper">
                
-            <NavLink to={`/editpost/${id}`}> <button id={id} onClick={props.editPost} className="btn-edit"> Edit Post </button></NavLink>
+            <NavLink to={`/editpost/${id}`}> <button id={id} className="btn-edit"> Edit Post </button></NavLink>
             <NavLink to ='/'><button id={id} onClick={props.deletePost} className="btn-delete">Delete</button></NavLink>
             
             </div>

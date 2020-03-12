@@ -5,7 +5,6 @@ import '../assets/style/postitem.css'
 
 const PostItem = (props) => {
     let {id, title, category} = props.post
-    console.log(id)
 
     let postStyles = [
         {backgroundColor: 'var(--blue)'},
@@ -17,12 +16,12 @@ const PostItem = (props) => {
     ]
     
     let index = 0;
-    if(category.includes('Work')) {
+    if(category.toLowerCase().includes('work')) {
         postStyles = postStyles[index];
-    } else if(category.toLowerCase().includes('speech')) {
+    } else if(category.toLowerCase().includes('entertainment')) {
         index = index +1
         postStyles = postStyles[index]
-    } else if(category.toLowerCase().includes('recreation')) {
+    } else if(category.toLowerCase().includes('travel')) {
         index = index +2
         postStyles = postStyles[index];
     }    else if(category.toLowerCase().includes('sport')) {
