@@ -2,18 +2,18 @@
 .post-item__container {
     display:flex;
     flex-direction: column;
-    justify-content: space-between;
-    background-color: rgba(51, 204, 224, 0.7);
+    justify-content: center;
     color: #fff; 
-    padding: 2rem 4rem;
-    border: 1px solid rgba(229, 243, 245, 0.7);
+    padding: 5rem 4rem;
+    border: 1px solid rgba(229, 243, 245, 0.5);
     margin: .7rem;
-    width: 50rem;
+    width: 23rem;
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
     cursor: pointer;
+    
 }
 
 
@@ -21,12 +21,21 @@
 
 .post-item__wrapper {
     display: grid;
+    grid-template-columns: repeat(3 1fr);
+    justify-items: center;
     align-items: center;
-    grid-template-columns: 45% 45% 10%;
 }
 
 .post-item__wrapper h3 {
     color: white;
+    text-align: center;
+}
+
+.read-links__wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
 }
 .view-link {
     padding: 1.2rem;
@@ -40,6 +49,15 @@
 
 }
 
+.btn-read__more {
+    border: none;
+    background: none;
+    padding: .3rem;
+    font-size: 16px;
+    color: white;
+    font-family: 'Montserrat';
+    margin: .6rem;
+}
 .link {
     text-decoration: none;
     color: white;
@@ -54,6 +72,7 @@
 .fa-readme {
     color: rgb(234, 233, 247);
     opacity: .7;
+    margin: .6rem;
 }
 
 .fa-readme:hover {
@@ -68,3 +87,21 @@
 
 .grow2 { transition: all .2s ease-in-out; }
 .grow2:hover { transform: scale(1.1);}
+
+@media screen and (max-width: 768px) {
+    .post-item__container {
+        width: 20rem;
+        
+    }
+    
+}
+
+@media screen and (max-width: 500px) {
+    .post-item__container {
+        width: 18rem;
+        padding: 3rem 2rem;
+
+        
+    }
+    
+}

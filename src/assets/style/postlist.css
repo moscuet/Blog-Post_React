@@ -1,3 +1,10 @@
+.posts-wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+
+}
+
 .container-blog {
     padding: 4rem 5rem;
 }
@@ -28,4 +35,20 @@
     transform: translateY(-.1rem);
 
 }
+
+@media screen and (max-width: 1024px) {
+    .container-blog {
+        padding: 5rem 2rem;
+    }
+    .posts-wrapper {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .posts-wrapper {
+        grid-template-columns: 1fr;
+    }
+}
+
 
