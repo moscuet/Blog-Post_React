@@ -30,29 +30,19 @@ class App extends Component {
   }
 
   deletePost = (e) => {
-    console.log(e.target.props)
     const unDeletedPosts = this.state.posts.filter((post) => post.id !== e.target.id)
     this.setState({posts: unDeletedPosts})
 
   }
   
-  /*
-  editPost = (id, updatedPost) => {
-    const updatedPosts = this.state.posts.map((post) => {
-        if(post.id === id) {
-            return updatedPost
-        } else {
-          return post
-        }
-    })
-    this.setState({posts: updatedPosts})
-}*/
 
   editPost = (newPost, id) => {
     const newPosts= this.state.posts.map((post) => {
     return post.id === id ? newPost : post
     })
-    this.setState({posts:newPosts})
+    this.setState({posts: newPosts})
+
+    
     }
 
 

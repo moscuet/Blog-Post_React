@@ -10,4 +10,5 @@ input {
 textarea {
     margin-top: 1rem;
     border: none;
+    line-height: 1.8;
 }

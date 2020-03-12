@@ -15,7 +15,6 @@ class EditPost extends Component {
                  }
                  
         }
-
        
     }
 
@@ -27,15 +26,7 @@ class EditPost extends Component {
 
      }
 
-     /*
-    handleSubmit= (e) => {
-         e.preventDefault();
-         const updatedPost = {...this.state.post}
-         this.props.editPost(this.props.id, updatedPost);
-         this.props.history.push('/');
-
-     }*/
-
+    
     handleChange = (e) => {
         let {name, value} = e.target;
         const post = {...this.state.post,[name]: value}
@@ -50,7 +41,6 @@ class EditPost extends Component {
          return post.id === id
      })
      this.setState({post: filteredPosts[0]})
-     console.log(filteredPosts)
     }
     render() {
         
@@ -67,10 +57,10 @@ class EditPost extends Component {
             <select name="category" value={category} onChange={this.handleChange}>
                 <option value=''>----Select Category</option>
                 <option value='Work'>Work</option>
-                <option value='Speech'>Speech</option>
-                <option value='Recreation'>Recreation</option>
-                <option value='Sport'>Sport</option>
-                <option value='Other'>Other</option>
+                    <option value='Entertainment'>Entertainment</option>
+                    <option value='Travel'>Travel</option>
+                    <option value='Sport'>Sport</option>
+                    <option value='Other'>Other</option>
             </select>
 
             <textarea type="text" 
@@ -91,44 +81,3 @@ class EditPost extends Component {
 }
 
 export default EditPost
-
-/*
-const EditPost = (props) => {
-    let {posts, id} = props
-    console.log(posts, id)
-
-    
-    const filteredPosts = posts.filter((post) => {
-        return post.id === id
-    })
-
-    return (
-        <div>
-            <h1>Edit Post</h1>
-            <input type="text" 
-            name="title" 
-            value={filteredPosts[0].title}
-            onChange={props.handleChange}
-            id={id}/>
-
-            <input type="text" 
-            name="category" 
-            value={filteredPosts[0].category}
-            onChange={props.handleChange}/>
-
-            <textarea type="text" 
-            name="description" 
-            defaultValue={filteredPosts[0].description}
-            onChange={props.handleChange}/>
-
-            <div className="buttons-wrapper"></div>
-            <button id={id}>Save</button>
-            <NavLink to ="/"><button>Cancel</button></NavLink>
-
-            
-        </div>
-    )
-}
-
-export default EditPost;*/
-

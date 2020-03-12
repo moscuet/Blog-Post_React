@@ -61,8 +61,8 @@ class AddPost extends Component {
                      <select name="category" value={category} onChange={this.handleChange}>
                         <option value=''>----Select Category</option>
                         <option value='Work'>Work</option>
-                        <option value='Speech'>Speech</option>
-                        <option value='Recreation'>Recreation</option>
+                        <option value='Entertainment'>Entertainment</option>
+                        <option value='Travel'>Travel</option>
                         <option value='Sport'>Sport</option>
                         <option value='Other'>Other</option>
                     </select>
