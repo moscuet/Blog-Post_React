@@ -57,6 +57,8 @@
     color: white;
     font-family: 'Montserrat';
     margin: .6rem;
+    cursor: pointer;
+
 }
 .link {
     text-decoration: none;

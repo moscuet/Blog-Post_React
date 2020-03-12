@@ -33,20 +33,21 @@ const PostItem = (props) => {
 
     }
     return (
-        <NavLink to={`/viewpost/${id}`} className="link">
 
             <div className="post-item__container grow" style={postStyles} >
             <div className="post-item__wrapper">
                 <h3 className="post-title">{title}</h3>
                 <h3 className="post-category">{category}</h3>
                 <div className="read-links__wrapper">
+                <NavLink to={`/viewpost/${id}`} className="link">
+
                 <button className="btn-read__more">Read</button>
                      <i className="fab fa-readme grow2"></i>
-
+                     </NavLink>
                 </div>
             </div>
             </div>
-            </NavLink>
+           
 
     )
 }
