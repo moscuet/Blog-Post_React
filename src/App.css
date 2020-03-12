@@ -7,8 +7,8 @@
   /*padding: 4rem 2rem;*/
   background-image: linear-gradient(to right, rgba(253, 252, 251, 0.15), rgba(255, 255, 255, 0.19)), url("./assets/imgs/back.jpg");
   background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
+  background-position: top;
+  
 }
 
 * {
@@ -17,6 +17,13 @@
   box-sizing: border-box;
 }
 
+:root {
+  --blue: rgba(61, 117, 170, 0.7);
+  --yellow: rgba(205, 218, 29, 0.7);
+  --green: rgba(30, 209, 149, 0.7);
+  --violet: rgba(224, 51, 146, 0.7);
+  --brown: rgba(230, 95, 42, 0.7);
+}
 .wrapper {
   min-height: 100%;
   position: relative;

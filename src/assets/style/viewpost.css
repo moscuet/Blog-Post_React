@@ -1,6 +1,7 @@
 .viewpost-wrapper {
     padding: 5rem 10rem;
 }
+
 .viewpost-container {
     padding: 3rem 4rem;
     border: 1px solid lightgray;
@@ -9,11 +10,11 @@
     justify-content: center;
     align-items: center;
     line-height: 2.3;
-    background-image: linear-gradient(to right, rgb(253, 252, 251), rgba(237, 249, 250, 0.18)), url("../imgs/back.jpg");
     background-position: center;
     background-size: cover;
     border-radius: 5px;
     width: 50rem;
+    color: white;
 
 }
 
@@ -25,7 +26,7 @@
 
 .back-to-posts__btn {
     padding: 1.2rem;
-    background-color: rgb(70, 81, 88);
+    background-color: rgb(89, 135, 163);
     border: none;
     border-radius: 3px;
     color: white;
@@ -54,7 +55,7 @@
 
 h3 {
     margin: 2rem;
-    color: rgb(37, 41, 99);
+    color: rgb(255, 255, 255);
 }
 
 .buttons-wrapper {
@@ -87,7 +88,6 @@ button {
     text-decoration: none;
 
 }
-
 
 .btn-edit:hover {
     background-color: rgb(85, 152, 194);

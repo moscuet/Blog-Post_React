@@ -10,7 +10,7 @@ const PostList = (props) => {
   ))
 
           return (
-            <div class="container-blog">
+            <div className="container-blog">
             <h1 className="blog-header">Blog Posts</h1>
             <div className="add-post-container">
               <NavLink to='/addpost' className="add-post-link">Add Post</NavLink>

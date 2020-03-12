@@ -45,19 +45,28 @@ class AddPost extends Component {
             <div>
                 <form className="form" onSubmit={this.handleSubmit}>
                     <div className="input-topics">
-                    <label>Title</label>
+                    <div>
+                    <label className="title-category">Title</label>
                     <input type="text" name="title"
                     value={title} placeholder="title" 
                     onChange={this.handleChange}></input>
                     </div>
-
-                    <div className="input-topics">
-                    <label>Category</label>
-                    <input type="text" 
+                    <div>
+                    <label className="title-category">Category</label>
+                    {/* <input type="text" 
                     name="category" 
                     value={category}
                     placeholder="category" 
-                    onChange={this.handleChange}></input>
+                    onChange={this.handleChange}></input> */}
+                     <select name="category" value={category} onChange={this.handleChange}>
+                        <option value=''>----Select Category</option>
+                        <option value='Work'>Work</option>
+                        <option value='Speech'>Speech</option>
+                        <option value='Recreation'>Recreation</option>
+                        <option value='Sport'>Sport</option>
+                        <option value='Other'>Other</option>
+                    </select>
+                    </div>
                     </div>
                     
                     <label>Write a New Post</label>
