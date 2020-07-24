@@ -1,8 +1,31 @@
-form {
-    background-image: linear-gradient(to right, rgb(253, 252, 251), rgba(237, 249, 250, 0.18)), url("../imgs/back.jpg");
-    background-position: center;
-    background-size: cover;}
+.edit-post__container {
+    background-color: rgb(43, 37, 37);
+    padding: 3rem 7rem;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
+.edit-form {
+    padding: 4rem 4rem;
+    margin: 2rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    line-height: 1.9;
+    border: 3px solid #fff;
+    border-radius: 10px;
+    background-image: linear-gradient(-60deg, #ff5858 0%, #f09819 100%);         
+    color: white;
+    font-weight: 700;
+}
+
+.inputs-wrapper {
+    display: flex;
+    justify-content: center;
+}
 input {
     margin-top: 1rem;
 }

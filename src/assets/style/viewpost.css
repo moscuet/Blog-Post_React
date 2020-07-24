@@ -1,20 +1,30 @@
 .viewpost-wrapper {
     padding: 5rem 10rem;
+    background-color: rgb(43, 37, 37);
+    width: 100vw;
+    display: flex;
+    justify-content: center; 
+
 }
 
 .viewpost-container {
-    padding: 3rem 4rem;
     border: 1px solid lightgray;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    line-height: 2.3;
     background-position: center;
     background-size: cover;
     border-radius: 5px;
-    width: 50rem;
+    width: 40rem;
     color: white;
+
+
+}
+
+.viewpost-header {
+    padding: 2rem 3rem;
+    width: 100%;
 
 }
 
@@ -24,15 +34,10 @@
     
 }
 
-.back-to-posts__btn {
+.back-to-posts__container {
     padding: 1.2rem;
-    background-color: rgb(89, 135, 163);
-    border: none;
-    border-radius: 3px;
-    color: white;
-    cursor: pointer;
-    margin: 1rem;
-    align-self: flex-start;
+    display: flex;
+    justify-content: space-evenly;
     font-family: 'Montserrat';
 
 }
@@ -40,13 +45,21 @@
 .back-to-posts__link {
     color: white;
     text-decoration: none;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
 }
 
-.back-to-posts__btn:hover {
-    background-color: rgb(103, 114, 121);
+.back-to-posts__text {
+    margin-left: 1rem;
+}
+.back-to-posts__link:hover {
+    color: rgb(211, 182, 182);
     transform: translateY(-.1rem);
 
 }
+
+
 
 .header-container {
     display: flex;
@@ -56,8 +69,19 @@
 h3 {
     margin: 2rem;
     color: rgb(255, 255, 255);
+    font-size: 17px;
 }
 
+.viewpost-body {
+    background: rgb(247, 243, 243);
+    padding: 2rem 2rem;
+}
+
+.viewpost-description {
+    color: rgb(14, 13, 13);
+    line-height: 1.8;
+
+}
 .buttons-wrapper {
     display: flex;
     justify-content: center;
@@ -71,7 +95,7 @@ button {
 .btn-edit,
 .btn-delete {
     padding: 1.2rem;
-    background-color: lightskyblue;
+    background-color: rgb(81, 165, 199);
     border: none;
     border-radius: 3px;
     color: white;
@@ -79,12 +103,13 @@ button {
     margin: 1rem;
     font-family: 'Montserrat';
     margin: 1.5rem;
+    width: 8rem;
 
 
 }
 
 .btn-delete {
-    background-color: rgb(250, 135, 135);
+    background-color: #ee2031;
     text-decoration: none;
 
 }
