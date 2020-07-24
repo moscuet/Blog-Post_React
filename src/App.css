@@ -1,16 +1,4 @@
 
-.App {
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  /*padding: 4rem 2rem;*/
-  background-image: linear-gradient(to right, rgba(253, 252, 251, 0.15), rgba(255, 255, 255, 0.19)), url("./assets/imgs/back.jpg");
-  background-size: cover;
-  background-position: top;
-  
-}
-
 * {
   margin: 0;
   padding: 0;
@@ -18,11 +6,11 @@
 }
 
 :root {
-  --blue: rgba(61, 117, 170, 0.7);
-  --yellow: rgba(201, 167, 14, 0.7);
+  --blue: rgba(112, 216, 241, 0.7);
+  --yellow: rgba(255, 231, 15, 0.7);
   --green: rgba(30, 209, 149, 0.7);
   --violet: rgba(157, 33, 168, 0.7);
-  --brown: rgba(230, 95, 42, 0.7);
+  --brown: rgba(133, 26, 44, 0.7);
 }
 .wrapper {
   min-height: 100%;
