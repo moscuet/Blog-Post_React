@@ -1,6 +1,6 @@
-Its a Group Project with React for blog post to add post, edit post, delete post.
-There was 4 members in the group, we worked together and shared individual code with one person who added code to file and tested before merge in github repo. 
-
+### Its a Group Project with React for blog post to add post, edit post, delete post.
+### There was 4 members in the group, we worked together and shared individual code with one person who added code to file and tested before merge in github repo. 
+[GitHub](http://github.com)
 
 
 
