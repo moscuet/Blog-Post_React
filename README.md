@@ -1,5 +1,5 @@
-### Its a Group Project with React for blog post to add post, edit post, delete post.
-### There were 4 members in the group, we worked together and shared individual code with one person (micahsuomi) who added code to the file and tested before merge with github repo. 
+## Its a Group Project with React for blog post to add post, edit post, delete post.
+#### There were 4 members in the group, we worked together and shared individual code with one person (micahsuomi) who added code to the file and tested before merge with github repo. 
 
 [# DEMO - Deplyed in Netlify](https://nifty-shirley-ff48f6.netlify.app/)
 
