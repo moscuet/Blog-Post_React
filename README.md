@@ -1,3 +1,9 @@
+Its a Group Project with React for blog post to add post, edit post, delete post.
+There was 4 members in the group, we worked together and shared individual code with one person who added code to file and tested before merge in github repo. 
+
+
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
