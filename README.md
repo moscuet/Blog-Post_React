@@ -3,12 +3,9 @@
 
 [# DEMO - Deplyed in Netlify](https://nifty-shirley-ff48f6.netlify.app/)
 
-
-
 # 
 # 
 # 
-
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
