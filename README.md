@@ -1,10 +1,9 @@
 
 <p align="center">
-  <img src="https://skillicons.dev/icons?i=react,redux,typescript,git" />
+  <img src="https://skillicons.dev/icons?i=react,github,netlify" />
   <br/>
   <span>Team Collaboration</span> | <span>GitHub Workflow</span>
 </p>
-
 ## React Blog Post Application
 
 
