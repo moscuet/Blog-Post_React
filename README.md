@@ -1,74 +1,27 @@
-## Its a Group Project with React for blog post to add post, edit post, delete post.
-#### There were 4 members in the group, we worked together and shared individual code with one person (micahsuomi) who added code to the file and tested before merge with github repo. 
 
 [# DEMO - Deplyed in Netlify](https://nifty-shirley-ff48f6.netlify.app/)
 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<p align="center">
+  <img src="https://skillicons.dev/icons?i=react,redux,typescript,git" />
+  <br/>
+  <span>Team Collaboration</span> | <span>GitHub Workflow</span>
+</p>
 
-## Available Scripts
+## React Blog Post Application
+### 📝 Project Description
+This React-based blog post application showcases the power of teamwork and collaboration in software development. As a group of four members, we combined our expertise to create an app that allows users to add, edit, and delete blog post. Utilizing React for the frontend and integrating various technologies for backend processes, our project emphasizes clean code, efficient functionality, and a seamless user experience.
 
-In the project directory, you can run:
+### 🔥 Features
+Blog Post Management: Users can create, edit, and delete their blog posts.
+Collaborative Development: Developed through close collaboration among team members, sharing individual code contributions through GitHub.
+Code Integration and Testing: All code was integrated and tested by a dedicated team member (micahsuomi), ensuring a robust and error-free application.
 
-### `npm start`
+### 🛠 Tech Stack
+Frontend: React.js for building the user interface, with state management handled by Redux.
+Version Control: GitHub, facilitating collaboration and code sharing among team members.
+Testing: Comprehensive testing to ensure application reliability and performance.
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### 📖 Project Collaboration
+The project was a collaborative effort, with each team member contributing to different facets of the application. Our workflow involved sharing individual code snippets and features, which were then carefully reviewed and integrated into the main repository by micahsuomi. This approach not only streamlined our development process but also ensured that every piece of code was tested and functional before being merged.
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
